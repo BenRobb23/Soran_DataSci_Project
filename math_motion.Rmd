@@ -20,15 +20,17 @@ library(plotly)
 ```{r}
 ## read and understand data ##
 time.df <- read.csv('C:/My stuff/Data Science 1/DataSci_project/function/coordinates_Dami.csv')
-head(df)
+#BR# The script uses a hard-coded file path. It is recommended to make this path more flexible, either by allowing users to input the file path or using a relative path.
 
+head(df)
+#BR# In the line head(df), it seems like the intention is to display the first few rows of the data frame. However, 'df' is not defined in the script. It should be replaced with the correct variable name, which is likely 'time.df'.
 
 ```
 
 ```{r}
 #looking at the column's info
 str(time.df)
-
+#BR# In the plot related to machine confidence (TS_right_shoulder), there are references to columns like RIGHT_SHOULDER_V and RIGHT_WRIST_X, but these columns are not defined or manipulated in the script. Ensure that the correct columns are being used or update the script accordingly.
 ```
 
 
@@ -37,7 +39,7 @@ str(time.df)
 
 time.df2 <- time.df %>%
     mutate(t_sec = X/30)
-
+#BR# Your script uses both time.df and time.df2 to refer to the data frame. Consistent names throughout the script could add clarity.
 ```
 
 ```{r}
